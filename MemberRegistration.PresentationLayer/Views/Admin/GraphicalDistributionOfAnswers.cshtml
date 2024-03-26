@@ -1,0 +1,250 @@
+﻿
+@model List<List<int>>
+@{
+    ViewData["Title"] = "GraphicalDistributionOfAnswers";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var list =new List<string>();
+}
+ <div class="m-4">
+
+    <h1>GraphicalDistributionOfAnswers</h1>
+ </div>
+
+  
+<style>
+    .queText{
+        font-size:0.9rem;
+    }
+</style>
+<div class="container m-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="queText">What is your gender ?</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chart1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="queText">Messi or Ronaldo ?</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chart2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="queText">Do you sing in the bathroom ?</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chart3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="queText">What is your favorite flower ?</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chart4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="queText">What is your favorite singer ?</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chart5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="queText">What are your favorite car brands ?</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chart6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="queText">Which social networks do you use ?</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chart7"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="queText">How many points out of ten is your software knowledge ?</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chart8"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="https://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
+<script type="text/javascript" src="https://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        var data1 = [@Model[0][0],@Model[0][1]];
+        var data2 = [@Model[1][0], @Model[1][1]];
+        var data3 = [@Model[2][0], @Model[2][1]];
+        var data4 = [@Model[3][0], @Model[3][1] , @Model[3][2], @Model[3][3]];
+        var data5 = [@Model[4][0], @Model[4][1] , @Model[4][2], @Model[4][3]];
+        var data6 = [@Model[5][0], @Model[5][1] , @Model[5][2], @Model[5][3]];
+        var data7 = [@Model[6][0], @Model[6][1] , @Model[6][2], @Model[6][3], @Model[6][4], @Model[6][5]];
+        var data8 = [@Model[7][0], @Model[7][1] , @Model[7][2], @Model[7][3], @Model[7][4], @Model[7][5] , @Model[7][6], @Model[7][7], @Model[7][8], @Model[7][9]];
+        
+        $("#chart1").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+                    
+                }
+            },
+            dataSeries: [{
+                seriesType: "line",
+                data: data1
+            }]
+        });
+
+        $("#chart2").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+
+                }
+            },
+            dataSeries: [{
+                seriesType: "line",
+                data: data2
+            }]
+        });
+        $("#chart3").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+
+                }
+            },
+            dataSeries: [{
+                seriesType: "line",
+                data: data3
+            }]
+        });
+
+        $("#chart4").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+
+                }
+            },
+            dataSeries: [{
+                seriesType: "line",
+                data: data4
+            }]
+        });
+
+        $("#chart5").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+
+                }
+            },
+            dataSeries: [{
+                seriesType: "line",
+                data: data5
+            }]
+        });
+        $("#chart6").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+
+                }
+            },
+            dataSeries: [{
+                seriesType: "line",
+                data: data6
+            }]
+        });
+        $("#chart7").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+
+                }
+            },
+            dataSeries: [{
+                seriesType: "line",
+                data: data7
+            }]
+        });
+        $("#chart8").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+
+                }
+            },
+            dataSeries: [{
+                seriesType: "line",
+                data: data8
+            }]
+        });
+    });
+</script>
+
+

@@ -1,0 +1,64 @@
+﻿@model MemberRegistration.EntityLayer.Concrete.Login
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Master login Form Responsive Widget Template  :: w3layouts</title>
+    <meta asp-for="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta asp-for="keywords" content=" Master  Login Form Widget Tab Form,Login Forms,Sign up Forms,Registration Forms,News letter Forms,Elements" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="~/weblogin Tema/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=Cormorant+SC:300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+</head>
+
+<body>
+    <div class="padding-all">
+        <div class="header">
+            <h1>Member Login Screen</h1>
+        </div>
+       
+        <div style="color:white" class="alert-danger">
+            @if (ViewData["LoginFlag"] != null)
+            {
+                @ViewData["LoginFlag"]
+            }
+        </div>
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="design-w3l">
+            <div class="mail-form-agile">
+                <form asp-action="LoginButtonAction" asp-controller="Account" method="post">
+
+                    <input type="text" asp-for="Username" placeholder="Kullanıcı Adınız..." />
+                    <span style="color:white" asp-validation-for="Username"></span>
+                    <br />
+                    <br />
+                    <input type="password" asp-for="Password" class="padding" placeholder="Şifreniz..." />
+                    <span style="color:white" asp-validation-for="Password"></span>
+                    <br />
+                    <br />
+                    <input type="submit" value="Login">
+                    <div class="text-center mt-5">
+                        <span style="color: white;margin: 5px;">Create an account</span>
+                        <a style="color: white" href="/Account/SignUp" class="p-2 m-4">Sign up</a>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="clear"> </div>
+        </div>
+
+    </div>
+</body>
+</html>

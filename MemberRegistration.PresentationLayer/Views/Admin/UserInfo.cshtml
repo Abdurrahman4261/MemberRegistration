@@ -1,0 +1,62 @@
+﻿@model MemberRegistration.EntityLayer.Model.AllUserInfos
+
+@{
+    ViewData["Title"] = "UserInfo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int? id = Model.AllUserInfosId;
+    
+}
+<div class="m-5">
+    <h1>SOME INFORMATION</h1>
+</div>
+
+<div style="width: 900px" class="table-responsive">
+
+    <table class="table-bordered table table-striped table-dark table-bordered m-5">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Topicality</th>
+                <th scope="col">NumberOfSurveyAnswers</th>
+                <th scope="col">1.Question Rate</th>
+                <th scope="col">2.Question Rate</th>
+                <th scope="col">3.Question Rate</th>
+                <th scope="col">4.Question Rate</th>
+                <th scope="col">5.Question Rate</th>
+                <th scope="col">6.Question Rate</th>
+                <th scope="col">7.Question Rate</th>
+                <th scope="col">8.Question Rate</th>
+                <th scope="col">9.Question Rate</th>
+                <th scope="col">10.Question Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>@Model.Topicality</td>
+                <td>@Model.NumberOfSurveyAnswers</td>
+                <td>@Model.QuestioOneResponseRate</td>
+                <td>@Model.QuestioTwoResponseRate</td>
+                <td>@Model.QuestioThreeResponseRate</td>
+                <td>@Model.QuestioFourResponseRate</td>
+                <td>@Model.QuestioFiveResponseRate</td>
+                <td>@Model.QuestioSixResponseRate</td>
+                <td>@Model.QuestioSevenResponseRate</td>
+                <td>@Model.QuestioEightResponseRate</td>
+                <td>@Model.QuestioNineResponseRate</td>
+                <td>@Model.QuestioTenResponseRate</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<div style="margin:8%">
+    <form method="post" asp-action="UserInfo">
+        <div class="form-group">
+            <button href="/Admin/UserInfo/@id" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>
+

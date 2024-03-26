@@ -1,0 +1,77 @@
+﻿@using Microsoft.AspNetCore.Http;
+@model MemberRegistration.EntityLayer.Concrete.User
+@{
+    ViewData["Title"] = "ProfileInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string name = Context.Session.GetString("name");
+    string surname = Context.Session.GetString("surname");
+    string username = Context.Session.GetString("username");
+    string email = Context.Session.GetString("email");
+    string password = Context.Session.GetString("password");
+    int? id = Context.Session.GetInt32("id");
+
+}
+
+<h1>Profile Info</h1>
+
+
+
+
+<form method="post" asp-action="ProfileInfo" class="form-check m-4">
+    <div class="form-group">
+        <label for="id">Id</label>
+        <input asp-for="UserId" type="text" class="form-control" id="identity" value="@id"  readonly>
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input asp-for="Name" type="text" class="form-control" id="name" value="@name">
+        <span style="color:black" asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label for="surname">Surname</label>
+        <input asp-for="Surname" type="text" class="form-control" id="surname" value="@surname">
+        <span style="color:black" asp-validation-for="Surname"></span>
+    </div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input asp-for="UserName" type="text" class="form-control" id="username" value="@username">
+        <span style="color:black" asp-validation-for="UserName"></span>
+    </div>
+    <div class="form-group">
+        <label for="myemail">Email address</label>
+        <input type="email" asp-for="Email" class="form-control" id="myemail" value="@email">
+        <span style="color:black" asp-validation-for="Email"></span>
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input asp-for="Password" type="password" class="form-control" id="Password" value="@password">
+        <span style="color:black" asp-validation-for="Password"></span>
+    </div>
+    <div class="form-group">
+        <button href="/Home/ProfileInfo/@id" class="btn btn-primary">Update</button>
+    </div>
+</form>
+
+@* @using (Html.BeginForm("ProfileUpdate", "Home", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.UserId)
+    @Html.TextBoxFor(x => x.UserId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.SurName)
+    @Html.TextBoxFor(x => x.SurName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.UserName)
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Email)
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Password)
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update</button>
+}
+ *@

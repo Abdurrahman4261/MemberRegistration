@@ -1,0 +1,164 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\tema\css\bootstrap.min.css" />
+    <None Include="wwwroot\tema\css\magnific-popup.css" />
+    <None Include="wwwroot\tema\css\templatemo-upright.css" />
+    <None Include="wwwroot\tema\fontawesome\css\all.min.css" />
+    <None Include="wwwroot\tema\fontawesome\LICENSE.txt" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-brands-400.eot" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-brands-400.ttf" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-brands-400.woff" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-regular-400.eot" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-regular-400.ttf" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-regular-400.woff" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-solid-900.eot" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-solid-900.ttf" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-solid-900.woff" />
+    <None Include="wwwroot\tema\fontawesome\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\tema\img\about-01.jpg" />
+    <None Include="wwwroot\tema\img\about-02.jpg" />
+    <None Include="wwwroot\tema\img\about-03.jpg" />
+    <None Include="wwwroot\tema\img\gallery\animal-01.jpg" />
+    <None Include="wwwroot\tema\img\gallery\animal-02.jpg" />
+    <None Include="wwwroot\tema\img\gallery\animal-03.jpg" />
+    <None Include="wwwroot\tema\img\gallery\animal-04.jpg" />
+    <None Include="wwwroot\tema\img\gallery\animal-05.jpg" />
+    <None Include="wwwroot\tema\img\gallery\animal-06.jpg" />
+    <None Include="wwwroot\tema\img\gallery\animal-07.jpg" />
+    <None Include="wwwroot\tema\img\gallery\animal-08.jpg" />
+    <None Include="wwwroot\tema\img\gallery\animal-09.jpg" />
+    <None Include="wwwroot\tema\img\gallery\building-01.jpg" />
+    <None Include="wwwroot\tema\img\gallery\building-02.jpg" />
+    <None Include="wwwroot\tema\img\gallery\building-03.jpg" />
+    <None Include="wwwroot\tema\img\gallery\building-04.jpg" />
+    <None Include="wwwroot\tema\img\gallery\building-05.jpg" />
+    <None Include="wwwroot\tema\img\gallery\building-06.jpg" />
+    <None Include="wwwroot\tema\img\gallery\building-07.jpg" />
+    <None Include="wwwroot\tema\img\gallery\building-08.jpg" />
+    <None Include="wwwroot\tema\img\gallery\building-09.jpg" />
+    <None Include="wwwroot\tema\img\gallery\nature-01.jpg" />
+    <None Include="wwwroot\tema\img\gallery\nature-02.jpg" />
+    <None Include="wwwroot\tema\img\gallery\nature-03.jpg" />
+    <None Include="wwwroot\tema\img\gallery\nature-04.jpg" />
+    <None Include="wwwroot\tema\img\gallery\nature-05.jpg" />
+    <None Include="wwwroot\tema\img\gallery\nature-06.jpg" />
+    <None Include="wwwroot\tema\img\gallery\nature-07.jpg" />
+    <None Include="wwwroot\tema\img\gallery\nature-08.jpg" />
+    <None Include="wwwroot\tema\img\gallery\nature-09.jpg" />
+    <None Include="wwwroot\tema\img\gallery\portrait-01.jpg" />
+    <None Include="wwwroot\tema\img\gallery\portrait-02.jpg" />
+    <None Include="wwwroot\tema\img\gallery\portrait-03.jpg" />
+    <None Include="wwwroot\tema\img\gallery\portrait-04.jpg" />
+    <None Include="wwwroot\tema\img\gallery\portrait-05.jpg" />
+    <None Include="wwwroot\tema\img\gallery\portrait-06.jpg" />
+    <None Include="wwwroot\tema\img\gallery\portrait-07.jpg" />
+    <None Include="wwwroot\tema\img\gallery\portrait-08.jpg" />
+    <None Include="wwwroot\tema\img\gallery\portrait-09.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\animal-01.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\animal-02.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\animal-03.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\animal-04.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\animal-05.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\animal-06.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\animal-07.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\animal-08.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\animal-09.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\building-01.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\building-02.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\building-03.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\building-04.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\building-05.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\building-06.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\building-07.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\building-08.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\building-09.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\nature-01.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\nature-02.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\nature-03.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\nature-04.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\nature-05.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\nature-06.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\nature-07.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\nature-08.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\nature-09.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\portrait-01.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\portrait-02.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\portrait-03.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\portrait-04.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\portrait-05.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\portrait-06.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\portrait-07.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\portrait-08.jpg" />
+    <None Include="wwwroot\tema\img\gallery\tn\portrait-09.jpg" />
+    <None Include="wwwroot\tema\img\icons8-home-50.png" />
+    <None Include="wwwroot\tema\img\img-01.jpg" />
+    <None Include="wwwroot\tema\img\img-02.jpg" />
+    <None Include="wwwroot\tema\img\img-03.jpg" />
+    <None Include="wwwroot\tema\img\img-04.jpg" />
+    <None Include="wwwroot\tema\img\img-about-01.jpg" />
+    <None Include="wwwroot\tema\img\img-home-01-big.jpg" />
+    <None Include="wwwroot\tema\img\img-home-01.jpg" />
+    <None Include="wwwroot\tema\img\logo.png" />
+    <None Include="wwwroot\tema\img\medas.png" />
+    <None Include="wwwroot\tema\img\select-arrow.png" />
+    <None Include="wwwroot\tema\index.html" />
+    <None Include="wwwroot\tema\js\imagesloaded.pkgd.min.js" />
+    <None Include="wwwroot\tema\js\isotope.pkgd.min.js" />
+    <None Include="wwwroot\tema\js\jquery-3.4.1.min.js" />
+    <None Include="wwwroot\tema\js\jquery.magnific-popup.min.js" />
+    <None Include="wwwroot\tema\js\jquery.singlePageNav.min.js" />
+    <None Include="wwwroot\tema\js\parallax\LICENSE" />
+    <None Include="wwwroot\tema\js\parallax\parallax.min.js" />
+    <None Include="wwwroot\tema\js\templatemo-script.js" />
+    <None Include="wwwroot\tema\slick\ajax-loader.gif" />
+    <None Include="wwwroot\tema\slick\fonts\slick.eot" />
+    <None Include="wwwroot\tema\slick\fonts\slick.svg" />
+    <None Include="wwwroot\tema\slick\fonts\slick.ttf" />
+    <None Include="wwwroot\tema\slick\fonts\slick.woff" />
+    <None Include="wwwroot\tema\slick\LICENSE" />
+    <None Include="wwwroot\tema\slick\slick-theme.css" />
+    <None Include="wwwroot\tema\slick\slick.min.css" />
+    <None Include="wwwroot\tema\slick\slick.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="9.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MemberRegistration.BusinessLayer\MemberRegistration.BusinessLayer.csproj" />
+    <ProjectReference Include="..\MemberRegistration.DataAccessLayer\MemberRegistration.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\MemberRegistration.EntityLayer\MemberRegistration.EntityLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Resumes\" />
+  </ItemGroup>
+
+</Project>

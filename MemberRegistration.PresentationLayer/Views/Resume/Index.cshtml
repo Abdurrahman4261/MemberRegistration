@@ -1,0 +1,22 @@
+﻿@model MemberRegistration.EntityLayer.Concrete.Resume
+@using Microsoft.AspNetCore.Http; 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Resume</h1>
+
+
+<form asp-controller="Resume" asp-action="Index" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="File" ></label>
+        <input asp-for="File" class="form-control-file" type="file" id="myfile">
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add" class="btn btn-secondary" >
+        <span asp-validation-for="File" class="text-danger position-relative " style="left:5%"></span>
+    </div>
+</form>
+
+@* for="myfile" *@
