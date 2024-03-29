@@ -41,14 +41,30 @@ namespace MemberRegistration.PresentationLayer.Controllers
             infos = info;
             return View(infos);
         }
-        public IActionResult GraphicalDistributionOfAnswers(int page=1)
+        public IActionResult Answer()
+        {
+            return View();
+        }
+        [HttpPost]
+        public List<List<object>> AnswerChart()
         {
             MemberManager memberManager = new MemberManager(_memberContext);
-            var numberOfAnswers = new List<List<int>>();
+            var numberOfAnswers = new List<List<AnswerChart>>();
 
-            numberOfAnswers= memberManager.NumberOfAnswers(numberOfAnswers);
-
-            return View(numberOfAnswers);
+            numberOfAnswers = memberManager.NumberOfAnswersChart(numberOfAnswers);
+            
+            List<List<object>> data = new List<List<object>>();
+            foreach (var item in numberOfAnswers)
+            {
+                var sortedAnswers = item.OrderByDescending(a=>a.rate).ToList();
+                var list = new List<object>();
+                List<string> labels = sortedAnswers.Select(n=>n.text).ToList();
+                List<int> rates = sortedAnswers.Select(n => n.rate).ToList();
+                list.Add(labels);
+                list.Add(rates);
+                data.Add(list);
+            }
+            return data;
         }
     }
 }

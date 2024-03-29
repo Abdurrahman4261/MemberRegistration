@@ -1,0 +1,213 @@
+﻿
+@{
+    ViewData["Title"] = "Answer";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="row m-3">
+    <div class="col-6">
+        <h5>What is your gender ?</h5>
+        <canvas id="barChart1" width="200" height="110" style="width:197px ; height:110px;"></canvas>
+    </div>
+
+    <div class="col-6">
+        <h5>Messi or Ronaldo ?</h5>
+        <canvas id="barChart2" width="200" height="110" style="width:197px ; height:110px;"></canvas>
+    </div>
+</div>
+
+<div class="row m-3">
+    <div class="col-6">
+        <h5>Do you sing in the bathroom ?</h5>
+        <canvas id="barChart3" width="200" height="110" style="width:197px ; height:110px;"></canvas>
+    </div>
+
+    <div class="col-6">
+        <h5>What is your favorite flower ?</h5>
+        <canvas id="barChart4" width="200" height="110" style="width:197px ; height:110px;"></canvas>
+    </div>
+</div>
+
+<div class="row m-3">
+    <div class="col-6">
+        <h5>What is your favorite singer ?</h5>
+        <canvas id="barChart5" width="200" height="110" style="width:197px ; height:110px;"></canvas>
+    </div>
+
+    <div class="col-6">
+        <h5>What are your favorite car brands ?</h5>
+        <canvas id="barChart6" width="200" height="110" style="width:197px ; height:110px;"></canvas>
+    </div>
+</div>
+
+<div class="row m-3">
+    <div class="col-6">
+        <h5>Which social networks do you use ?</h5>
+        <canvas id="barChart7" width="200" height="110" style="width:197px ; height:110px;"></canvas>
+    </div>
+
+    <div class="col-6">
+        <h5>How many points out of ten is your software knowledge ?</h5>
+        <canvas id="barChart8" width="200" height="110" style="width:197px ; height:110px;"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type : "POST",
+            url: "/Admin/AnswerChart",
+            data : "",
+            contentType : "application/json; charset = utf8",
+            dataType : "json",
+            success : OnSuccess,
+        });
+
+        function OnSuccess(data) {
+            console.log(data);
+            const pieChart1 = document.getElementById('pieChart1');
+            const barChart2 = document.getElementById('barChart2');
+
+            var _data = data;
+
+            var _labels1 = _data[0][0];
+            var _labels2 = _data[1][0];
+            var _labels3 = _data[2][0];
+            var _labels4 = _data[3][0];
+            var _labels5 = _data[4][0];
+            var _labels6 = _data[5][0];
+            var _labels7 = _data[6][0];
+            var _labels8 = _data[7][0];
+            var _ChartData1 = _data[0][1];
+            var _ChartData2 = _data[1][1];
+            var _ChartData3 = _data[2][1];
+            var _ChartData4 = _data[3][1];
+            var _ChartData5 = _data[4][1];
+            var _ChartData6 = _data[5][1];
+            var _ChartData7 = _data[6][1];
+            var _ChartData8 = _data[7][1];
+            var colors = ['Red', 'Blue', 'Green', 'Yellow', 'Purple'];
+
+            new Chart(barChart1,
+            {
+                    type: 'bar',
+                data: {
+                    labels: _labels1,
+                    datasets: [{
+                        backgroundColor: colors,
+                        data: _ChartData1,
+                        borderWidth: 1,
+                    }]
+                }
+            });
+
+            new Chart(barChart2,
+            {
+                type: 'bar',
+                data: {
+                    labels: _labels2,
+                    datasets: [{
+                        backgroundColor: colors,
+                        data: _ChartData2,
+                        borderWidth: 1,
+                    }]
+                }
+            });
+            new Chart(barChart3,
+            {
+                type: 'bar',
+                data: {
+                    labels: _labels3,
+                    datasets: [{
+                        backgroundColor: colors,
+                        data: _ChartData3,
+                        borderWidth: 1,
+                    }]
+                }
+            });
+            new Chart(barChart4,
+            {
+                type: 'bar',
+                data: {
+                    labels: _labels4,
+                    datasets: [{
+                        backgroundColor: colors,
+                        data: _ChartData4,
+                        borderWidth: 1,
+                    }]
+                }
+            });
+
+            new Chart(barChart5,
+            {
+                type: 'bar',
+                data: {
+                    labels: _labels5,
+                    datasets: [{
+                        backgroundColor: colors,
+                        data: _ChartData5,
+                        borderWidth: 1,
+                    }]
+                }
+            });
+            new Chart(barChart6,
+            {
+                type: 'bar',
+                data: {
+                    labels: _labels6,
+                    datasets: [{
+                        backgroundColor: colors,
+                        data: _ChartData6,
+                        borderWidth: 1,
+                    }]
+                }
+            });
+            new Chart(barChart7,
+            {
+                type: 'bar',
+                data: {
+                    labels: _labels7,
+                    datasets: [{
+                        backgroundColor: colors,
+                        data: _ChartData7,
+                        borderWidth: 1,
+                    }]
+                }
+            });
+
+            new Chart(barChart8,
+            {
+                type: 'bar',
+                data: {
+                    labels: _labels8,
+                    datasets: [{
+                        backgroundColor: colors,
+                        data: _ChartData8,
+                        borderWidth: 1,
+                    }]
+                }
+            });
+        }
+    });
+      
+</script>
+
+
+
+
+@* 
+              new Chart (barChart,
+            {
+                type: 'bar',
+                data: {
+                    labels: _labels,
+                    datasets: [{
+                        backgroundColor: colors,
+                        data: _ChartData,
+                        borderWidth: 1,
+                    }]
+                }
+            }); *@
